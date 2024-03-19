@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispatch Services Knowledge Portal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+        integrity='sha384-lZN37f5CVYqb5Kg9GVRve7MBof8ckSZJE2aok8Jik/RdQh4jZt9SwhswgXu2wnFk' crossorigin='anonymous'>
+</head>
+
+<body>
+    <style>
+        .blackboard {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+        .chalk-text {
+            font-family: 'Architects Daughter', cursive;
+        }
+
+        .text-black {
+            color: #000;
+        }
+
+        .cmd-box {
+            background-color: #acaeb0;
+            border: 1px solid #17191b;
+            border-radius: 5px;
+            padding: 0 0 25px 0;
+
+            color: #000 !important;
+           
+        }
+        .cmd-header {
+            background-color: #17191b;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .smallfont {
+            font-size: 10px;
+            color:#fff
+        }
+        .smallfont:hover{
+            font-size: 10px;
+            color:#aa7171
+        }
+        .cmd-text {
+            padding: 10px;
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">DS Knowledge Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dispatch Coordinator</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item">Dispatch Creation</a></li>
+                        <li><a class="dropdown-item" href="#">Dispatch Updation</a></li>
+                        <li><a class="dropdown-item" href="#">Status Updation</a></li>
+                        <li><a class="dropdown-item" href="#">Dispatch Cancellation</a></li>
+                        <li><a class="dropdown-item" href="#">Reschedule Dispatch</a></li>
+                        <li><a class="dropdown-item"  href="module1.html" >Ready Dispatch</a></li>
+                        <li><a class="dropdown-item" href="#">Hold Dispatch</a></li>
+                    </ul>
+
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Appointment Coordinator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dispatch Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SFS Manager</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CGS Appointment Manager</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Videos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid blackboard chalk-text">
+        <div class="container-fluid blackboard">
+            <h3 class="chalk-text">Ready Dispatch<i class="fas fa-chalkboard"></i></h3>
+            <p class="chalk-text small">Delta Derivation</p>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 text-center">
+                    
+                            <h4>Video on Ready Dispatch</h4>
+                            <video width="560" height="315" controls>
+                                <source src="Hamaad KT_ Dispatch Coordinator_Delta Derivation.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                    
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header blackboard">
+                            Code Walkthrough Steps
+                        </div>
+                        <div class="card-body text-black">
+                            <p>
+                            <b>Main Controller</b>
+                            <br>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book. It has survived not only five centuries, but also the leap into electronic
+                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">CMD</span><button class="float-right btn btn-link smallfont" onclick="copyCode()">Copy Code</button>
+                                </div>
+                                
+                                <i class="cmd-text">
+                                    code &lt; PROJECT_PATH &gt; example.java
+                                </i>
+                            </div>
+                            <br>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book. It has survived not only five centuries, but also the leap into electronic
+                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button class="float-right btn btn-link smallfont" onclick="copyCode()">Copy Code</button>
+                                </div>
+                                
+                                <i class="cmd-text">
+                                    function copyCode() /explain
+                                </i>
+                            </div>
+                            <br>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book. It has survived not only five centuries, but also the leap into electronic
+                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button class="float-right btn btn-link smallfont" onclick="copyCode()">Copy Code</button>
+                                </div>
+                                
+                                <i class="cmd-text">
+                                    function copyCode() /explain
+                                </i>
+                            </div>
+                            <br>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book. It has survived not only five centuries, but also the leap into electronic
+                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button class="float-right btn btn-link smallfont" onclick="copyCode()">Copy Code</button>
+                                </div>
+                                
+                                <i class="cmd-text">
+                                    function copyCode() /explain
+                                </i>
+                            </div>
+                        </p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer fixed-bottom bg-light">
+        <div class="container text-center">
+            <span class="text-muted">Created for Github Copilot Challenge</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <script>
+        function copyCode() {
+            // JavaScript function to copy the code
+            var code = document.querySelector('.cmd-box i');
+            navigator.clipboard.writeText(code.innerText);
+            alert('Code copied to clipboard!');
+        }
+    </script>
+
+</html>
