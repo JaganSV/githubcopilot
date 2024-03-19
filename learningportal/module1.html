@@ -36,8 +36,9 @@
             padding: 0 0 25px 0;
 
             color: #000 !important;
-           
+
         }
+
         .cmd-header {
             background-color: #17191b;
             color: #fff;
@@ -46,14 +47,17 @@
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
         }
+
         .smallfont {
             font-size: 10px;
-            color:#fff
+            color: #fff
         }
-        .smallfont:hover{
+
+        .smallfont:hover {
             font-size: 10px;
-            color:#aa7171
+            color: #aa7171
         }
+
         .cmd-text {
             padding: 10px;
         }
@@ -80,7 +84,7 @@
                         <li><a class="dropdown-item" href="#">Status Updation</a></li>
                         <li><a class="dropdown-item" href="#">Dispatch Cancellation</a></li>
                         <li><a class="dropdown-item" href="#">Reschedule Dispatch</a></li>
-                        <li><a class="dropdown-item"  href="module1.html" >Ready Dispatch</a></li>
+                        <li><a class="dropdown-item" href="module1.html">Task Duration</a></li>
                         <li><a class="dropdown-item" href="#">Hold Dispatch</a></li>
                     </ul>
 
@@ -108,18 +112,18 @@
 
     <div class="container-fluid blackboard chalk-text">
         <div class="container-fluid blackboard">
-            <h3 class="chalk-text">Ready Dispatch<i class="fas fa-chalkboard"></i></h3>
+            <h3 class="chalk-text">Task Duration<i class="fas fa-chalkboard"></i></h3>
             <p class="chalk-text small">Delta Derivation</p>
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6 text-center">
-                    
-                            <h4>Video on Ready Dispatch</h4>
-                            <video width="560" height="315" controls>
-                                <source src="Hamaad KT_ Dispatch Coordinator_Delta Derivation.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                    
+
+                    <h4>Video on Ready Dispatch</h4>
+                    <video width="560" height="315" controls>
+                        <source src="Hamaad KT_ Dispatch Coordinator_Delta Derivation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
                 </div>
             </div>
             <br>
@@ -131,81 +135,310 @@
                         </div>
                         <div class="card-body text-black">
                             <p>
-                            <b>Main Controller</b>
+                                <b class="py-6">TaskDurationRouteBuilder</b>
+                                <br /><br />
+
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">CMD</span><button class="float-right btn btn-link smallfont"
+                                        onclick="copyCode()">Copy Code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    code
+                                    "&lt;YOUR_PROJECT_FOLDER&gt;/DispatchTaskDuration/src/main/java/com/centurylink/cgs/dispatchtaskduration/route/TaskDurationRouteBuilder.java"
+                                </i>
+                            </div>
                             <br>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen
-                            book. It has survived not only five centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                            Java class named <b>TaskDurationRouteBuilder</b> that extends the <b>RouteBuilder</b>
+                            class from the Apache Camel framework. This class is used to define routes for handling
+                            HTTP requests and processing data.
+                            The <b>configure</b> method is where the routes are defined. It starts by setting up
+                            logging for all routes using the <b>interceptFrom</b> and <b>onCompletion</b> methods.
+                            These log the start and end of each exchange, respectively.
+                            Next, it sets up exception handling for <b>CannotGetJdbcConnectionException</b>,
+                            <b>BadSqlGrammarException</b>, and <b>SQLException</b> exceptions. If any of these
+                            exceptions occur,
+                            it logs the exception, marks it as handled, processes it with the
+                            <b>Http500DatabaseErrorProcessor</b>, and then logs the response.
+                            The <b>restConfiguration</b>restConfiguration method is used to configure the REST DSL. It
+                            sets the component to
+                            "servlet", the binding mode to JSON, and enables pretty printing of JSON.
+                            Then, it loads properties from an <b>app.properties</b>app.properties file and sets them on
+                            the Camel
+                            context.
+                            The <b>rest("/duration")</b>rest("/duration") method is used to define a REST API with the
+                            base path
+                            "/duration". It sets up three GET endpoints: "/version", "/healthz", and "/". The
+                            "/version" and "/healthz" endpoints are routed to "direct:versionRoute" and
+                            "direct:healthRoute", respectively. The "/" endpoint is used to fetch task duration
+                            data. It takes a number of query parameters, validates them with the <b>InputValidation</b>
+                            processor, and then processes them with the <b>FetchTaskDurationProcess</b> processor if
+                            they
+                            are valid.
+                            Finally, it defines two routes for "direct:versionRoute" and "direct:healthRoute". These
+                            routes process the exchange with the <b>VersionProcessor</b> and <b>HealthProcessor</b>,
+                            respectively,
+                            and then set the content type of the response to "application/json".
+                            has context menu. <br /><br />
 
 
                             <div class="cmd-box">
                                 <div class="cmd-header">
-                                    <span class="text-left">CMD</span><button class="float-right btn btn-link smallfont" onclick="copyCode()">Copy Code</button>
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        Code</button>
                                 </div>
-                                
+
                                 <i class="cmd-text">
-                                    code &lt; PROJECT_PATH &gt; example.java
+                                    What is the purpose of the <b>VersionProcessor</b> and <b>HealthProcessor</b>
+                                    classes in the code?
                                 </i>
                             </div>
                             <br>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen
-                            book. It has survived not only five centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
+                            The <b>VersionProcessor</b> and <b>HealthProcessor</b> classes in the code are likely to be
+                            custom processor classes that handle specific processing tasks in the Camel route.
+                            <b>VersionProcessor</b>: This class is likely used to handle requests to the "/version"
+                            endpoint. It might be responsible for returning information about the current version of the
+                            application or service. This could include the version number, build date, commit hash, or
+                            any other information that is relevant to the version of the application.
+                            <b>HealthProcessor</b>: This class is likely used to handle requests to the "/healthz"
+                            endpoint. It might be responsible for performing a health check of the application or
+                            service and returning a status indicating whether the application is running correctly. This
+                            could involve checking the status of various components of the application, such as the
+                            database, external services, or internal processes.
+                            These processors are used in the Camel routes defined in the <b>TaskDurationRouteBuilder</b>
+                            class. When a request is made to the "/version" or "/healthz" endpoint, the corresponding
+                            processor is invoked to handle the request. The processor performs its specific task and
+                            then modifies the exchange (the message being processed) as needed, such as by setting the
+                            response body or headers.<br><br>
                             <div class="cmd-box">
                                 <div class="cmd-header">
-                                    <span class="text-left">Copilot</span><button class="float-right btn btn-link smallfont" onclick="copyCode()">Copy Code</button>
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        Code</button>
                                 </div>
-                                
+
                                 <i class="cmd-text">
-                                    function copyCode() /explain
+                                    What is the purpose of the <b>Http500DatabaseErrorProcessor</b> class in the code?
                                 </i>
                             </div>
                             <br>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen
-                            book. It has survived not only five centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            The <b>Http500DatabaseErrorProcessor</b> class is likely a custom processor that handles
+                            specific types of database exceptions in your Apache Camel routes.
+                            When an exception of type <b>CannotGetJdbcConnectionException</b>,
+                            <b>BadSqlGrammarException</b>, or <b>SQLException</b> is thrown during the execution of a
+                            route, the<b> onException</b> clause in your route definition specifies that the
+                            <b>Http500DatabaseErrorProcessor</b> should handle it.
+                            The purpose of this class is to process the exception and prepare an appropriate HTTP 500
+                            error response. This might involve logging the error, formatting a user-friendly error
+                            message, and setting the HTTP status code to 500.
+                            After the <b>Http500DatabaseErrorProcessor</b> has processed the exception, the<b>
+                                marshal().json(JsonLibrary.Jackson, true)</b> call is used to serialize the response
+                            body to JSON format. The response is then logged and returned to the client.
+                            Remember, the exact behavior of the <b>Http500DatabaseErrorProcessor</b> depends on its
+                            implementation, which is not shown in the provided code.<br><br>
 
                             <div class="cmd-box">
                                 <div class="cmd-header">
-                                    <span class="text-left">Copilot</span><button class="float-right btn btn-link smallfont" onclick="copyCode()">Copy Code</button>
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        Code</button>
                                 </div>
-                                
+
                                 <i class="cmd-text">
-                                    function copyCode() /explain
+                                    What is the purpose of the <b>InputValidation</b> processor in the<b>
+                                        TaskDurationRouteBuilder</b> class?
                                 </i>
                             </div>
-                            <br>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen
-                            book. It has survived not only five centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            <br><br The <b>InputValidation</b> processor in the <b> TaskDurationRouteBuilder</b> class
+                            is likely used to validate the input parameters of the HTTP GET request to the "/duration"
+                            endpoint.
+                            In the route definition for the "/duration" endpoint, the <b>InputValidation</b> processor
+                            is invoked before the <b> FetchTaskDurationProcess</b> processor. This suggests that the
+                            <b>InputValidation</b> processor is responsible for checking the validity of the input
+                            parameters.
+                            The <b>choice().when().simple("${property.isInputValid}")</b> statement then checks a
+                            property named <b> isInputValid</b>. If this property is true, the <b>
+                                FetchTaskDurationProcess</b> processor is invoked to fetch the task duration. If
+                            <b>isInputValid</b> is false, the route ends, and presumably an error response is returned
+                            to the client.
+                            The exact validation rules implemented by the <b> InputValidation</b> processor are not
+                            shown in the provided code. These could include checks for required parameters, checks for
+                            parameter formats, or any other validation rules that are relevant to the "/duration"
+                            endpoint.<br><br>
 
+                            Fetch Task Duration
+                            <br><br>
                             <div class="cmd-box">
                                 <div class="cmd-header">
-                                    <span class="text-left">Copilot</span><button class="float-right btn btn-link smallfont" onclick="copyCode()">Copy Code</button>
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
                                 </div>
-                                
+
                                 <i class="cmd-text">
-                                    function copyCode() /explain
+                                    .get("/") /explain
                                 </i>
                             </div>
-                        </p>
+                            <br><br>
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    What is the purpose of the FetchTaskDurationProcess processor in the
+                                    TaskDurationRouteBuilder class?
+                                </i>
+                            </div>
+                            <br><br>
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    What is the purpose of the VersionProcessor class in the TaskDurationRouteBuilder
+                                    class?
+                                </i>
+                            </div>
+                            <br><br>
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    What is the purpose of the HealthProcessor class in the TaskDurationRouteBuilder
+                                    class?
+                                </i>
+                            </div>
+                            <br><br>
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    What is the purpose of the Database object in the FetchTaskDurationProcess class?
+                                </i>
+                            </div>
+                            <br><br>
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    What are the different types of exceptions that the Http500DatabaseErrorProcessor
+                                    handles in the TaskDurationRouteBuilder class?
+                                </i>
+                            </div>
+                            <br><br>
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    What is the purpose of the restConfiguration method in the TaskDurationRouteBuilder
+                                    class?
+                                </i>
+                            </div>
+                            <br><br>
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    What is the purpose of the route() method in the TaskDurationRouteBuilder class?
+                                </i>
+                            </div>
+                            <br><br>
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    What is the purpose of the route() method in the TaskDurationRouteBuilder class?
+                                </i>
+                            </div>
+
+                            <br><br>
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    What is the purpose of the .marshal().json(JsonLibrary.Jackson, true) call in the
+                                    TaskDurationRouteBuilder class?
+                                </i>
+
+                            </div>
+                            <br><br>
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    What is the purpose of the .responseMessage() method in the TaskDurationRouteBuilder
+                                    class? </i>
+
+                                
+                            </div>
+                            <br><br>
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    What is the purpose of the .route() method in Apache Camel's DSL?
+
+                                </i>
+                            </div>
+                            <br><br>
+                            <div class="cmd-box">
+                                <div class="cmd-header">
+                                    <span class="text-left">Copilot</span><button
+                                        class="float-right btn btn-link smallfont" onclick="copyCode()">Copy
+                                        code</button>
+                                </div>
+
+                                <i class="cmd-text">
+                                    What is the purpose of the .endResponseMessage() method in the TaskDurationRouteBuilder class?
+                                </i>
+                            </div>
+                            </p>
 
 
 
